@@ -1,0 +1,16 @@
+class Solution {
+    public int secondLargestElement(int[] nums) {
+      int max=nums[0];
+      int min=-1;
+      for(int ele:nums){
+        if(max<ele){
+            min=max;
+            max=ele;
+        }
+        if(ele>min && ele<max){
+            min=ele;
+        }
+      }
+      return min;
+    }
+}
